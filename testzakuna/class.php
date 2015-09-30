@@ -2,30 +2,23 @@
 
 class operasibilangan{
 	private $a;
-	private $b;
-	
-	function seta($i){
-		$this->a = $i;
+	private $b;	
+		
+	function __construct($x,$y){
+		$this->a = $x;
+		$this->b = $y;
+
+		$this->a = $this->a + $this->b;
+		$this->b = $this->a - $this->b;
+		$this->a = $this->a - $this->b;
 	}
-	
+
 	function geta(){
 		return $this->a;
-	}
-	
-	function setb($i){
-		$this->b = $i;
-	}
+	}	
 	
 	function getb(){
 		return $this->b;
-	}
-	
-	function switcha(){
-		return $this->getb();	
-	}
-
-	function switchb(){
-		return $this->geta();
 	}	
 }
 ?>
